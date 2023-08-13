@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./user_13230.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 
     <title>Chat Sockets</title>
@@ -12,6 +13,7 @@
     *{
         margin:0;
         padding:0;
+        font-family: 'Courier New', Courier, monospace;
     }
     .container__form{
         position: fixed;
@@ -25,33 +27,34 @@
     }
     ul{
         list-style: none;
+        font-size: 20px;
+    }
+    ul li{
+        font-size: 20px;
+        padding:10px 40px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 800;
     }
     ul li:nth-child(odd){
-        padding:10px 30px;
         text-align: right;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 600;
         background-color: #e4e4e4;
     }ul li:nth-child(even){
-        padding:10px 30px;
         text-align: left;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 600;
         background-color: #ffffff;
     }
     .img_perfil{
         width: 35px;
         border-radius: 100%;
     }
+  
 </style>
 <body>
     <div class="p-3 bg-dark text-light d-flex align-item-center ">
         <div>
-            <img  class="img_perfil bg-light p-1 mr-2"src="./user_13230.png" alt="img perfil">
+            <img class="img_perfil bg-light p-1 mr-2"src="./user_13230.png" alt="img perfil">
         </div>
         <div>
-
-            <h4 class="mt-1">Otro Usuario</h4>
+            <h3 class="mt-1">Otro Usuario</h3>
         </div>
     </div>
     <div class="container__message">
@@ -61,7 +64,7 @@
     </div>
 
     <div  class="p-3 row container__form" >
-        <input type="text" placeholder="Ingresa el mensaje" class="form-control col mx-1 pl-3" id="inputText" >
+        <input type="text" placeholder="Ingresa el mensaje" class="form-control col mx-1 pl-3 py-4" id="inputText" >
         <input type="button" value="Enviar" class="btn btn-dark col-3 col-sm-2 mx-1" id="inputBtn">
     </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

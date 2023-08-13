@@ -9,22 +9,29 @@
     <title>Chat Sockets</title>
 </head>
 <style>
-    div{
+    *{
+        margin:0;
+        padding:0;
+    }
+    .container__form{
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
     }
+    .container__message{
+        margin-bottom: 80px;
+        position: relative;
+    }
     ul{
         list-style: none;
-
     }
     ul li:nth-child(odd){
         padding:10px 30px;
         text-align: right;
         font-family: 'Courier New', Courier, monospace;
         font-weight: 600;
-        background-color: #d1d1d1;
+        background-color: #e4e4e4;
     }ul li:nth-child(even){
         padding:10px 30px;
         text-align: left;
@@ -32,15 +39,30 @@
         font-weight: 600;
         background-color: #ffffff;
     }
+    .img_perfil{
+        width: 35px;
+        border-radius: 100%;
+    }
 </style>
 <body>
-    <ul class="list-group " id="ul">
-        
-    </ul>
+    <div class="p-3 bg-dark text-light d-flex align-item-center ">
+        <div>
+            <img  class="img_perfil bg-light p-1 mr-2"src="./user_13230.png" alt="img perfil">
+        </div>
+        <div>
 
-    <div  class="p-3 row " >
-        <input type="text" placeholder="Ingrese el mensaje" class="form-control col mx-2" id="inputText" >
-        <input type="button" value="Enviar" class="btn btn-dark col-1 mx-2" id="inputBtn">
+            <h4 class="mt-1">Otro Usuario</h4>
+        </div>
+    </div>
+    <div class="container__message">
+        <ul class="list-group" id="ul">
+            
+        </ul>
+    </div>
+
+    <div  class="p-3 row container__form" >
+        <input type="text" placeholder="Ingresa el mensaje" class="form-control col mx-1 pl-3" id="inputText" >
+        <input type="button" value="Enviar" class="btn btn-dark col-3 col-sm-2 mx-1" id="inputBtn">
     </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
